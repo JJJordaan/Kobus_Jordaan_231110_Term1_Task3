@@ -7,7 +7,10 @@
     justify-content: center;
 }
 
-.container {
+.HHcontainer {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
     background-color: #c95151;
     background-image: url(../Assets/Images/homePageHeader.png);
     background-repeat: no-repeat;
@@ -15,28 +18,41 @@
     height: 100vh;
 }
 
-.topNav ul{
+.topNav {
+    padding: 20px;
+    border: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: rgb(255, 255, 255,.6);
+    border-radius: 30px;
+}
+
+.topNav ul {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    width: 80%;
+    align-items: center;
     list-style-type: none;
-    background-color: rgb(56, 56, 56);
-    padding: 10px;
-    border: 20px #c95151;
-    margin: 50px;
+    
+
     overflow: hidden;
 }
 
+.LogoImg  {
+    float: left;
+    max-width: 200px;
+    height: auto;
+
+}
+
 .topNav a{
-    
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    
+    font-family: 'Times New Roman', Times, sans;
+    font-size: large;
 }
 
 .topNav a:hover{
