@@ -1,10 +1,7 @@
-.h1{
-    float: center;
-}
-
-.topNav {
-    display: flex;
-    justify-content: center;
+@font-face {
+    font-family: 'Porter_Sans_Block';
+    src: url(../Assets/Fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf);
+    font-weight: bold;
 }
 
 .HHcontainer {
@@ -19,8 +16,10 @@
 }
 
 .topNav {
+    
     padding: 20px;
-    border: 200px;
+    border: 0px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -28,52 +27,210 @@
     border-radius: 30px;
 }
 
-.topNav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    
-
-    overflow: hidden;
-}
-
-.LogoImg  {
-    float: left;
-    max-width: 200px;
-    height: auto;
-
-}
-
-.topNav a{
+.flex-Item a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    padding: 15px;
-    display: block;
+    width: 100px;
+    display: inline-block;
     text-align: center;
-    font-family: 'Times New Roman', Times, sans;
-    font-size: large;
+    font-family: "Roboto";
+    font-size: x-large;
+    font-weight: bold;
+    overflow: hidden;
 }
+    
 
-.topNav a:hover{
+.flex-Item p1:hover{
     background-color: rgb(190, 190, 190);
 }
 
-.topNav li{
-    justify-content: center;
-}
+.flex-Item p {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0px;
+    margin: 0px;
+    border-radius: 10px;
 
-.homePageHeader {
-    max-width: 100%;
-    max-height: 100%;
-}
+    align-items: center;
+    
 
-.homePageHeader img{
-    width: 100%;
-    height: 100%;
+    font-size: larger;
+    font-family: "Roboto";
+    font-weight: regular;
+
 }
 
 .main {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.Header-Text h1 {
+    padding-top: 60vh;
+    padding-left: 150px;
+    font-family: "Porter_Sans_Block";
+    font-weight: bold;
+    font-size: xxx-large;
+    color: #af0002;
+
+}
+
+.Header-Text h2 {
+    font-family: "Roboto";
+    color: #15006F;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    padding-left: 150px;
+}
+
+.Featured-Trips-Container {
+    background-color: #3e058f;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 200px;
+    display: flex;
+}
+
+.Featured-Trips-Container p {
+    padding-left: 180px;
+    margin-top: 50px;
+    color:white; 
+
+    background-color: transparent;
+
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: x-large;
+    
+}
+
+.Featured-Trips-Container h1 {
+    font-family: "Roboto";
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 180px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.Featured-Trips-Container p2 {
+    margin-left: 180px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    color: white;
+    background-color: #af0002;
+
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: x-large;
+
+    border-radius: 10px;
+}
+
+.Our-Shuttles-Container {
+    background-color: white;
+    margin-left: 200px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.Our-Shuttles-Container h1 {
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: x-large;
+    color: #71003f;
+    
+    margin-top: 50px;
+}
+
+.Our-Shuttles-Container h2 {
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: xxx-large;
+    color: #3e058f;
+    
+    margin-top: 20px;
+    margin-right: 180px;
+}
+
+.Our-Shuttles-Container p {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: x-large;
+    color: #71003f;
+}
+
+.Sneak-Peak-Container {
+    font-family: "Roboto";
+    background-color: #3e058f;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+.Sneak-Peak-Container h1 {
+    padding-top: 50px;
+    font-size: x-large;
+    color: #ff96c1;
+}
+
+.Sneak-Peak-Container h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: white;
+}
+
+.SP-Img-FlexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.Img-Flex h3 {
+    font-size: xx-large;
+    color: white;
+}
+
+.Img-Flex p {
+    margin-top: 10px;
+    color: white;
+}
+
+.Sneak-Peak-Container button {
+    align-self: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    border: 0px;
+    
+    background-color: #af0002;
+}
+
+.Sneak-Peak-Container p2 {
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
 }
