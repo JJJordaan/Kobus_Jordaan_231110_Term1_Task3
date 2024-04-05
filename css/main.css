@@ -5,26 +5,36 @@
 }
 
 .HHcontainer {
-    padding: 0px;
-    border: 0px;
-    margin: 0px;
-    background-color: #c95151;
-    background-image: url(../Assets/Images/homePageHeader.png);
-    background-repeat: no-repeat;
+
+    display: flex;
+    background-image: url(../assets/images/homePageHeader.png);
     background-size: cover;
     height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    
 }
 
 .topNav {
     
-    padding: 20px;
+   /* padding: 20px;
     border: 0px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
+
     width: 80%;
     background-color: rgb(255, 255, 255,.6);
-    border-radius: 30px;
+    border-radius: 30px;*/
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-top: 20px ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    background-color: #fff7e6d4;
+    border-radius: 30px; 
 }
 
 .flex-Item a {
@@ -63,11 +73,6 @@
 
 }
 
-.main {
-    margin-left: 0%;
-    margin-right: 0%;
-}
-
 .flexContainer {
     display: flex;
     flex-direction: row;
@@ -82,7 +87,7 @@
     padding-left: 150px;
     font-family: "Porter_Sans_Block";
     font-weight: bold;
-    font-size: xxx-large;
+    font-size: 45px;
     color: #af0002;
 
 }
@@ -233,4 +238,358 @@
     color: white;
     font-size: x-large;
     font-weight: bolder;
+}
+
+.Footer-BG {
+    background-color: white;
+    height: 50vh;
+}
+
+.Footer-Flex-Container {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 70px;
+}
+
+.Flex-FooterItem p {
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: 400;
+    color: #727272;
+} 
+
+.Flex-FooterItem h1 {
+    color: rgb(48, 48, 48);
+    font-size: x-large; 
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.Flex-FooterItem a {
+    text-decoration: none;
+} 
+
+.Flex-Footer-Img {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+}
+
+.Flex-Footer-Img img {
+    width: 100px;
+}
+
+.Footer-Extras p {
+    width: 80%; 
+    height: 2px;
+    background-color: rgb(209, 209, 209); 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 35px;
+}
+
+
+.Footer-Extras p1 {
+    color: #6e6e6e;
+    margin-left: 10%;
+}
+
+.Footer-Extras p2 {
+    color: #6e6e6e;
+    font-weight: bold;
+    float: right;
+    margin-right: 10%;
+}
+
+/*Flights*/
+
+.F-HH-Container {
+    display: flex;
+    background-image: url(../assets/images/headerbackBack.png);
+    background-size: cover;
+    height: 50vh;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+.flex-Item h1 { /* Flights Heading*/
+    font-family: "Porter_Sans_Block";
+    font-size: 45px;
+    color: white; 
+    text-align: center;
+    padding-top: 8vh;
+}
+
+.flex-Item h2 { /* Flights widgets block */
+    background-color: #3e058f;
+    margin-top: 70px;
+    height: 100px;
+    font-family: "Roboto";
+    font-size: x-Large;
+
+    display: flex;
+    align-items: center;
+}
+
+.Icon-Item {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Empty-x-Box {
+    width: 3px;
+    height: 35px;
+    background-color: #a7a7a7;
+}
+
+.Empty-y-Box {
+    width: 100%;
+    height: 3px;
+    background-color: #a7a7a7;
+}
+
+.Icon-Item p3{
+    color: white;
+}
+
+.White-TextBox {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff7e6d4;
+
+}
+
+.Planet-Options-BG {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Planet-Option-Container {
+    background-color: white;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.Planet-Option-Container h1 {
+    font-family: "Roboto";
+    font-size: 50px;
+    text-align: left;
+}
+
+.Planet-flex-Item img {
+    width: 600px;
+}
+
+.Money {
+    font-family: "Roboto";
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+    color: #6e6e6e;
+}
+
+.Money price {
+    padding-right: 40px;
+}
+
+.Stars {
+    display: flex;
+    margin-top: 10px;
+}
+
+.Stars img {
+    width: 25px;
+    padding: 10px;
+
+}
+
+.Stars p1 {
+    font-family: "Roboto";
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: #6e6e6e;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.Planet-flex-Item p {
+    font-family: "Roboto";
+    font-size: 20px;
+    text-align: left;
+    font-weight: 400;
+    color: #000000;
+}
+
+.Booking-Buttons {
+    margin-top: 5vh;
+    display: flex;
+}
+
+.Booking-Buttons button1 {
+    width: 20%;
+    border: 0px;
+    background-color: #3e058f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.Booking-Buttons p {
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.Booking-Buttons button2 {
+    width: 30%;
+    border: 0px;
+
+    background-color: #af0002;
+    border-radius: 10px;
+
+    margin-left: 10%;
+}
+
+.Lower-Planet-Info {
+    display: flex;
+    flex-direction: row;
+
+    color: #6e6e6e;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.Lower-Planet-Info-Item {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Contact*/
+
+.About-BG {
+    height: 80vh;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-FlexContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.About-FlexContainer h1 {
+    color: #71003f;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.About-FlexContainer h2 {
+    font-size: 50px;
+    font-weight: Bolder;
+    color: #15006F;
+    margin-top: 10px;
+}
+
+.About-FlexContainer p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #6e6e6e;
+    margin-top: 20px;
+}
+
+.Contact-Form-BG {
+    font-family: "Roboto";
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Contact-FlexContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contact-FlexContainer h1 {
+    color: #71003f;
+    font-size: 20px;
+    margin: 0px;
+    
+}
+
+.Contact-FlexContainer h2 {
+    font-size: 50px;
+    font-weight: Bolder;
+    color: #15006F;
+    margin-top: 10px;
+}
+
+.Contact-FlexContainer iframe {
+    border-radius: 20px;
+}
+
+.Contact-FlexItem {
+    width: 50%;
+}
+
+.Form-BG {
+    background-image: url(../Assets/Images/formBack.png); 
+    background-size: cover; 
+    height: 100vh; 
+    border-radius: 50px;
+
+}
+
+.Form-Field input {
+    margin-left: 10%;
+    border: 5px;
+    outline: none;
+    width: 80%;
+    height: 100px;
+    border-radius: 30px;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: large;
+    color: #000000;
+}
+
+.Form-Field label {
+    color: white;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+
+
+.Form-Field p {
+    font-size: 30px;
+    font-weight: bold;
+    width: 40%;
+    color: white;
+
+    margin-left: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #af0002;
+    border-radius: 30px;
 }
