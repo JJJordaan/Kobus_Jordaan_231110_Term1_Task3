@@ -12,25 +12,38 @@
     </head>
     <body>
 
-        <div class="F-HH-Container">
+        <div class="F-HH-Container"> <!--Hero Header Starts here-->
             <nav class="topNav">  <!--Navigation bar-->
                 <div class="flexContainer"> <!--Navigation bar flexbox-->
                     <div class="flex-Item">
-                        <img src="../Assets/Images/logo.png" width="250px">
+                        <img src="/Assets/Images/logo.png" width="250px">
                     </div>
 
                     <div class="flex-Item">
 
-                        <a href="../index.html"><p1> Home </p1></a> 
-                        <a href="flights.html"><p1  style="color: #af0002" > Flights </p1></a> 
+                        <a href="/index.html"><p1> Home </p1></a> 
+                        <a href="flights.html"  style="color: #af0002"><p1> Flights </p1></a> 
                         <a href="contact.html"><p1> Contact </p1></a>
+                        <a href="about.html"><p1> About </p1></a>
 
                     </div>
 
-                    <div class="flex-Item">
-                        <p><img src="../Assets/Images/Search icon.png" 
-                        width="20px" style="padding-right: 10px;">Search</p>
+                    <div class="search-wrapper" style="background-color: white; width: 20em; height: 3em; border-radius: 20%; display: flex; align-items : center; justify-content: space-between;">
+                        
+                        <button  class="border-0 bg-transparent" onclick="SearchFun()" style="background-color: transparent;  border: none;">
+                            
+                            <img src="/Assets/Images/Search_icon.png" style="width: 1em; align-items: center; margin-left: 2em;">
+                            
+                        </button>
+
+                        <input type="search" placeholder="Search" id="Search" style="border: none;">
+                        <span class="dot" id="cartsModal" 
+                        style="display: flex; justify-content: center; background-color: #af0002; border-radius: 50%; width: 1em;  
+                        margin-right: 1em; color: white;">0</span>
+
+                        <img src="/Assets/Images/ShoppingBag.png" alt="" style="height: 60%; width: 10%; margin-right: 1em;">
                     </div>
+                        
                 </div>
             </nav>
 
@@ -38,7 +51,7 @@
                 <h1> Book a flight </h1>
             </div>
 
-            <div class="flex-Item">
+            <div class="flex-Item" > <!--Filter bar starts here-->
                 <h2>
                     <div class="Icon-Item" style="padding-left: 200px;">
                         <img src="../Assets/Images/FilterWhite.png" width="30px">
@@ -70,7 +83,7 @@
 
                     <div class="Icon-Item">
                         <div class="White-TextBox">
-                            <p3 style="color: #3e058f;"> 6 </p3>
+                            <p3 style="color: #3e058f; "> 6 </p3>
                         </div>
                     </div>
 
@@ -84,10 +97,11 @@
                         </div>
                     </div>
                 </h2>
-            </div>
+            </div> <!--Filter bar ends here-->
+
         </div> <!--Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: white;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Mars" style="background-color: white;"> <!--Mars Section starts here-->
             <div class="Planet-Option-Container" >
 
                 <div class="Planet-flex-Item">
@@ -119,9 +133,21 @@
 
                     <div class="Booking-Buttons">
                         <button1>
-                            <p style="margin-left: 10px;">-</p>
-                            <p>1</p>
-                            <p style="margin-right: 10px;">+</p>
+                            <button onclick="funMinus('MarsQty.value', 'MarsQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="MarsQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('MarsQty.value', 'MarsQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 10px;">+</p>
+                            </button>
                         </button1>
 
                         <button2>
@@ -149,9 +175,9 @@
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Mars Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: #3e058f;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Neptune" style="background-color: #3e058f;"> <!--Neptune Section starts here-->
             <div class="Planet-Option-Container" 
                 style="background-color: #3e058f; margin-top: 0px;">
 
@@ -185,9 +211,21 @@
 
                     <div class="Booking-Buttons">
                         <button1 style="background-color: #fec440;">
-                            <p style="margin-left: 10px; color: black;">-</p>
-                            <p style="color: black">1</p>
-                            <p style="margin-right: 10px; color: black">+</p>
+                            <button onclick="funMinus('NeptuneQty.value', 'NeptuneQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center" style="color: black;">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="NeptuneQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('NeptuneQty.value', 'NeptuneQty')" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 10px;" style="color: black;">+</p>
+                            </button>
                         </button1>
 
                         <button2>
@@ -210,14 +248,14 @@
                             <p2>: SS405</p2>
                             <p2>: The Voyager</p2>
                             <p2>: Neptune, Commercial, Gourmet Experience </p2>
-                            <p2>: 4 April-28 March</p2>
+                            <p2>: 4 April - 28 March</p2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Neptune Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: white;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Jupiter" style="background-color: white;"> <!--Jupiter Section starts here-->
             <div class="Planet-Option-Container" >
 
                 <div class="Planet-flex-Item">
@@ -240,18 +278,32 @@
                         <p1> 48 Customer Reviews </p1>                      <!--Customer reviews-->
                     </div>
 
-                    <p> Embark on a Mars vacation: red deserts, ancient relics, and towering <br>
-                        canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and <br>
-                        stargazing under Phobos and Deimos. Unforgettable adventures beckon<br>
-                        on the rust-colored landscapes of the Red Planet. 
+                    <p> Embark on a Jupiter voyage aboard the "Jupiter Odyssey." Witness its <br>
+                        majestic storms and swirling atmosphere. Dive into metallic hydrogen <br>
+                        oceans. Explore its moons, each a world unto itself. Engage in gravity <br>
+                        surfing, comet chasing, and space excursions. Experience cosmic wonder <br>
+                        in luxury, blending exploration with adventure. 
                     </p>
 
                     <div class="Booking-Buttons">
                         <button1>
-                            <p style="margin-left: 10px;">-</p>
-                            <p>1</p>
-                            <p style="margin-right: 10px;">+</p>
+                            <button onclick="funMinus('JupiterQty.value', 'JupiterQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="JupiterQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('JupiterQty.value', 'JupiterQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 10px;">+</p>
+                            </button>
                         </button1>
+
 
                         <button2>
                             <p style="text-align: center;">Book Now</p>
@@ -273,14 +325,14 @@
                             <p2>: SS606</p2>                                <!--Extra Info-->
                             <p2>: The Odyssey</p2>
                             <p2>: Jupiter, Luxury, Adventure</p2>
-                            <p2>: 15 June-30 July</p2>
+                            <p2>: 15 June - 30 July</p2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Jupiter Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: #3e058f;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Saturn"style="background-color: #3e058f;"> <!--Saturn Section starts here-->
             <div class="Planet-Option-Container" 
                 style="background-color: #3e058f; margin-top: 0px;">
 
@@ -305,18 +357,31 @@
                         <p1 style="color: white;"> 16 Customer Reviews </p1>    <!--Customer reviews-->
                     </div>
 
-                    <p style="color: white;"> Embark on a voyage to Neptune aboard the "Neptune Voyager." Witness <br>
-                        surreal vistas of swirling clouds and rings. Experience weightlessness and <br>
-                        explore frigid oceans. Engage in thrilling spacewalks, observe celestial <br>
-                        phenomena, and savor gourmet space cuisine. An unforgettable <br>
-                        adventure awaits, blending luxury with cosmic exploration. 
+                    <p style="color: white;"> Embark on a thrilling voyage to Saturn aboard the "Saturn Explorer." <br>
+                        Marvel at its iconic rings and turbulent storms. Explore its diverse moons, <br>
+                        from icy Enceladus to mysterious Titan, with activities including rover <br>
+                        expeditions and cave exploration. Experience the wonders of the cosmos <br>
+                        amidst luxurious accommodations, where the thrill of discovery <br>
+                        intertwines seamlessly with the excitement of adventure. 
                     </p>
 
                     <div class="Booking-Buttons">
-                        <button1 style="background-color: #fec440;">            
-                            <p style="margin-left: 10px; color: black;">-</p>
-                            <p style="color: black">1</p>
-                            <p style="margin-right: 10px; color: black">+</p>
+                        <button1 style="background-color: #fec440;">
+                            <button onclick="funMinus('SaturnQty.value', 'SaturnQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center" style="color: black;">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="SaturnQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('SaturnQty.value', 'SaturnQty')" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 1em;" style="color: black;">+</p>
+                            </button>
                         </button1>
 
                         <button2>
@@ -339,14 +404,14 @@
                             <p2>: SS333</p2>                                                                <!--Extra Info-->
                             <p2>: The Explorer</p2>
                             <p2>: Saturn, Luxury, Adventure </p2>
-                            <p2>: 4 April-28 March </p2>
+                            <p2>: 4 April - 28 March </p2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Jupiter Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: white;  height: 110vh;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Uranus" style="background-color: white;  height: 110vh;"> <!--Uranus Section starts here-->
             <div class="Planet-Option-Container" style="align-items: center;">
 
                 <div class="Planet-flex-Item">
@@ -369,18 +434,33 @@
                         <p1> 12 Customer Reviews </p1>                      <!--Customer reviews-->
                     </div>
 
-                    <p> Embark on a Mars vacation: red deserts, ancient relics, and towering <br>
-                        canyons await. Enjoy low-gravity hiking, rover trips to Olympus Mons, and <br>
-                        stargazing under Phobos and Deimos. Unforgettable adventures beckon<br>
-                        on the rust-colored landscapes of the Red Planet. 
+                    <p> Embark on a cosmic adventure to Uranus with our "Uranus Unveiled" tour. <br>
+                        Explore its icy atmosphere and captivating moons. Experience thrilling <br>
+                        zero-gravity excursions, witness mesmerizing auroras, and immerse <br>
+                        yourself in celestial photography workshops. With luxury <br>
+                        accommodations and expert guides, discover the wonders of Uranus in a <br>
+                        journey of a lifetime.
                     </p>
 
                     <div class="Booking-Buttons">
                         <button1>
-                            <p style="margin-left: 10px;">-</p>
-                            <p>1</p>
-                            <p style="margin-right: 10px;">+</p>
+                            <button onclick="funMinus('UranusQty.value', 'UranusQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="UranusQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('UranusQty.value', 'UranusQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #3e058f;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 10px;">+</p>
+                            </button>
                         </button1>
+
 
                         <button2>
                             <p style="text-align: center;">Book Now</p>
@@ -402,14 +482,14 @@
                             <p2>: SS735</p2>                                <!--Extra Info-->
                             <p2>: The Endeavor</p2>
                             <p2>: Uranus, Workshop, Adventure</p2>
-                            <p2>: 16 June-19 July</p2>
+                            <p2>: 16 June - 19 July</p2>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Uranus Section ends here-->
 
-        <div class="Planet-Options-BG" style="background-color: #3e058f; height: 110vh;"> <!--Section starts here-->
+        <div class="Planet-Options-BG" id="Moon" style="background-color: #3e058f; height: 110vh;"> <!--Moon Section starts here-->
             <div class="Planet-Option-Container" 
                 style="background-color: #3e058f; margin-top: 0px;
                 align-items: center;">
@@ -435,19 +515,35 @@
                         <p1 style="color: white;"> 43 Customer Reviews </p1>    <!--Customer reviews-->
                     </div>
 
-                    <p style="color: white;"> Embark on a voyage to Neptune aboard the "Neptune Voyager." Witness <br>
-                        surreal vistas of swirling clouds and rings. Experience weightlessness and <br>
-                        explore frigid oceans. Engage in thrilling spacewalks, observe celestial <br>
-                        phenomena, and savor gourmet space cuisine. An unforgettable <br>
-                        adventure awaits, blending luxury with cosmic exploration. 
+                    <p style="color: white;"> Experience the ultimate lunar getaway with our "Moonlight Meander" <br>
+                        package. Depart Earth's atmosphere aboard the "Celestial Cruiser" for a <br>
+                        short but unforgettable journey to the Moon. Enjoy lunar walks, <br>
+                        breathtaking views of Earthrise, and stargazing under the moon's serene <br>
+                        glow. Immerse yourself in luxury accommodations amidst the tranquility <br>
+                        of space.
                     </p>
 
                     <div class="Booking-Buttons">
-                        <button1 style="background-color: #fec440;">            
-                            <p style="margin-left: 10px; color: black;">-</p>
-                            <p style="color: black">1</p>
-                            <p style="margin-right: 10px; color: black">+</p>
+                       
+
+                        <button1 style="background-color: #fec440;">
+                            <button onclick="funMinus('MoonQty.value', 'MoonQty' )" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Minus button gives planet id as parameter-->
+
+                                <p class="justify-content-center" style="color: black;">-</p>
+
+                            </button>
+                            
+                            <input placeholder="1" value="0" id="MoonQty"
+                            style="background: transparent; width: 2em; height: 2em; border: none; font-size: x-large;"></input>
+                            
+                            <button onclick="funPlus('MoonQty.value', 'MoonQty')" 
+                            style="border-radius: 40%; border: none; background-color: #fec440;"> <!--Plus button gives planet id as parameter-->
+                            
+                                <p style="margin-right: 1em;" style="color: black;">+</p>
+                            </button>
                         </button1>
+
 
                         <button2>
                             <p style="text-align: center;">Book Now</p>
@@ -474,7 +570,7 @@
                     </div>
                 </div>
             </div>
-        </div> <!--Section ends here-->
+        </div> <!--Moon Section ends here-->
 
         <div class="Footer-BG">             <!--Footer starts here-->
             <div class="Footer-Flex-Container">
@@ -513,6 +609,14 @@
 
             </div>
         </div>                                  <!--Footer ends here-->
+
+
+        <!-- Bootstrap and link js-->
+        <script src="/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     </body>
 
 </html>

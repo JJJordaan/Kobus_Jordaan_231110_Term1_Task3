@@ -24,12 +24,24 @@
                         <a href="../index.html"><p1> Home </p1></a> 
                         <a href="flights.html"><p1> Flights </p1></a> 
                         <a href="contact.html"><p1   style="color: #af0002" > Contact </p1></a>
+                        <a href="about.html"><p1>About</p1>
 
                     </div>
 
-                    <div class="flex-Item">
-                        <p><img src="../Assets/Images/Search icon.png" 
-                        width="20px" style="padding-right: 10px;">Search</p>
+                    <div class="search-wrapper" style="background-color: white; width: 20em; height: 3em; border-radius: 20%; display: flex; align-items : center; justify-content: space-between;">
+                        
+                        <button  class="border-0 bg-transparent justify-content-center" style="background-color: transparent; border: none;">
+                            <a href="flights.html" >
+                                <img src="/Assets/Images/Search_icon.png" style="width: 1em; align-items: center; margin-left: 2em;">
+                            </a>
+                        </button>
+
+                        <input type="search" placeholder="Search" id="Search" class="border-0 bg-Light" style="border: none">
+                        
+                        <img src="/Assets/Images/ShoppingBag.png" alt="" style="height: 60%; width: 10%;">
+                        <span class="dot" id="cartsModal" 
+                        style="display: flex; justify-content: center; background-color: #af0002; border-radius: 50%; width: 1em;  
+                        margin-right: 1em; color: white;">0</span>
                     </div>
                 </div>
             </nav>
@@ -39,34 +51,11 @@
             </div>
         </div>
 
-        <div class="About-BG">                  <!--About starts here-->
-            <div class="About-FlexContainer">
-                <div class="About-FlexItem">
-                    <h1>ABOUT</h1>
-                    <h2>RED PLANET VENTURES</h2>
-                    <p>Welcome to Red Planet Ventures, where we are dedicated to turning <br>
-                        dreams of interplanetary exploration into exhilarating realities. As a <br>
-                        premier provider of space tourism experiences, we specialize in <br>
-                        crafting meticulously curated journeys to the diverse planets within <br>
-                        our solar system. From the rugged terrain of Mars to the majestic <br>
-                        rings of Saturn, our expertly designed trips offer unparalleled <br>
-                        opportunities for discovery and adventure. With a commitment to <br>
-                        safety, innovation, and customer satisfaction, we strive to exceed <br>
-                        expectations and leave a lasting impression on every traveler who <br>
-                        embarks on a voyage with us. Join us as we push the boundaries of <br>
-                        exploration and unlock the mysteries of the cosmos with Red Planet <br>
-                        Ventures.</p>
-                </div>
-
-                <div class="About-FlexItem">
-                    <img src="../Assets/Images/contactImage.png" width="600px">
-                </div>
-            </div>
-        </div>
+        
 
         <div class="Contact-Form-BG">
-            <div class="Contact-FlexContainer">
-                <div class="Contact-FlexItem">
+            <div class="Contact-FlexContainer" style="margin-top: 5em; margin-bottom: 5em;">
+                <div class="Contact-FlexItem margin-top" >
                     <h1>CONTACT US THROUGH OUR</h1>
                     <h2>SOCIAL MEDIA PAGES</h2>
                     <div class="Flex-Footer-Img" style="margin-bottom: 5vh;">
@@ -98,32 +87,32 @@
                                     <label for="name">Your name</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="name" required>
+                                    <input type="text" id="name" placeholder="   Abc" required>
                                 </div>
 
                                 <div>
                                     <label for="email">Email address</label>
                                 </div>
                                 <div>
-                                    <input type="email" id="name" required>
+                                    <input type="email" placeholder="   Abc@def.com" id="name"">
                                 </div>
 
                                 <div>
                                     <label for="subject">Subject</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="Subject" required>
+                                    <input type="text" id="Subject" placeholder="   This is an optional" required>
                                 </div>
                                 
                                 <div>
-                                    <label for="Message">Your name</label>
+                                    <label for="Message">Message</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="name" required>
+                                    <input type="text" placeholder="   Hi! i'd Like to ask about" id="name" required>
                                 </div>
                                 
                                 <button2>
-                                    <p style="text-align: center;">Book Now</p>
+                                    <p class="text-center" style="text-align: center;">Book Now</p>
                                 </button2>
                             </div>
                         </form>
